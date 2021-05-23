@@ -1,0 +1,22 @@
+header {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+.header_pragmatic {
+    font-family: 'Pacifico',cursive;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer_nav {
+    font-size: 0.6rem;
+}
+
+.footer_pragmatic {
+    margin-top: 1rem;
+}
