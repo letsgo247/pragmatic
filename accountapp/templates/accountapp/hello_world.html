@@ -2,8 +2,22 @@
 
 {% block content %}
 
-  <div style = "height: 10rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;">
-      I'm main
-  </div>
+<main>
+    <h1>Hello World LIST</h1>
+    <br>
+    <form action="/account/hello_world/" method="post">
+        {% csrf_token %}
+        <input type="text" name="hello_world_input">
+        <br>
+        <input type="submit" class="btn btn-warning" value="POST!">
+    </form>
+    <br>
+    <h3>
+        {% if hello_world_output %}
+            text: {{ hello_world_output.text }}<br>
+        {% endif %}
+        post: {{ post }}
+    </h3>
+</main>
 
 {% endblock %}
