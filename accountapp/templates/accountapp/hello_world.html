@@ -13,9 +13,13 @@
     </form>
     <br>
     <h3>
-        {% if hello_world_output %}
-            text: {{ hello_world_output.text }}<br>
+        text:
+        {% if hello_world_list %}
+            {% for hello_world in hello_world_list %}
+                {{ hello_world.text }}<br>
+            {% endfor %}
         {% endif %}
+        <br>
         post: {{ post }}
     </h3>
 </main>
