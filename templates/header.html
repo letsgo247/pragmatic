@@ -7,7 +7,16 @@
         <span>nav1</span>
         <span>nav2</span>
         <span>nav3</span>
-        <span>nav4</span>
+        {% if not user.is_authenticated %}
+        <!-- anchor tag로 직접 클릭해서 들어가는 경우, 기존에 머무르던 페이지를 request.path로 전달해서 로그인 or 로그아웃 후 next로 되돌아 오도록 설정 -->
+        <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
+            <span>login</span>
+        </a>
+        {% else %}        
+        <a href="{% url 'accountapp:logout' %}?next={{ request.path }}">
+            <span>logout</span>
+        </a>
+        {% endif %}
     </div>
 </header>
 <hr>
