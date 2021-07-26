@@ -10,8 +10,6 @@ header {
 
 
 main {
-
-
     border-radius: 1rem;
     margin: 2rem;
 
@@ -24,7 +22,7 @@ footer {
 }
 
 .footer_nav {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .footer_pragmatic {
